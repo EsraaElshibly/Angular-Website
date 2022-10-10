@@ -1,0 +1,40 @@
+// Create mixin for dtyle which I use it so much, to make code more less and useable
+@mixin DisplayItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin TextDecoration {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 5px 20px;
+  height: 80px;
+  background-color: #8b1f86;
+  font-weight: 600;
+
+  // Make Style for header 
+  .header h1 a { @include TextDecoration() }
+  // Make Style for Unorderd list
+  .items .list { 
+    @include DisplayItems(); 
+
+    // Make Style for each list
+    li {
+    list-style: none;
+    margin-top: 20px;
+
+    // Make style for link in list
+    a { @include TextDecoration() }
+    }
+  }
+}
+
+// Use MediaQuery to make navbar responsive for all screens
+@media (max-width: 600px) {
+  .navbar {height: 110px;}
+  .navbar .items .list li {margin-bottom: 20px;}
+}
