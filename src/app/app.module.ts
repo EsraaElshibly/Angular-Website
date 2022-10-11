@@ -12,7 +12,7 @@ import { ProductPageComponent } from './Components/Products/ProductPage/ProductP
   declarations: [
     AppComponent,
     NavbarComponent,
-    ProductPageComponent
+    ProductPageComponent,
   ],
   imports: [
     BrowserModule,
