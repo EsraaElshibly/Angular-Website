@@ -1,15 +1,20 @@
 <div class="products container">
-  <div class="row content-card">
-      <!------- Start first card ------->
+  <!-- Class Row For Responsive design by bootstrab -->
+  <div class="row">
+      <!------- Start card Parent and use Structural directive for repeating card according to data in json file ------->
       <div class="prd-card card-box col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let product of productList">
         <div class="card">
-          <img src="https://picsum.photos/200" />
+          <!-- Show Image from json data -->
+          <img [src] = "product.ProductImg" alt="productImage" title="productImage" />
+          <!-- Show name -->
           <h3> {{product.ProductName}} </h3>
+          <!-- Make this div more responsive by bootstrap instead of using class d-flex  -->
           <div class="row">
             <div class="col-md-6 col-12">
               <p> {{product.ProductPrice }} $ </p>
             </div>
     
+            <!-- This start rsting for veiw not express about anything -->
             <div class="col-md-6 col-12">
               <ngb-rating
                 [max] = "5"
