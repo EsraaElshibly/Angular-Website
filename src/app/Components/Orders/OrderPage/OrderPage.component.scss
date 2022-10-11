@@ -2,13 +2,12 @@
 // var 
 $txt-color: rgb(117, 117, 117);
 $text-position : center;
-$fixed-number-margin : 20px;
 
 // Mixins
 @mixin HandleFlexItems {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 @mixin HandleTxtProduct {
@@ -16,112 +15,36 @@ text-align: $text-position;
 font-weight: bold;
 }
 
-@mixin HandleProductImage {
-    width: 200px;
-    height: 200px;
-    padding-right: 25px;
-}
-
-@mixin ShoppingButton {
-    background-color: #8b1f86;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-@mixin HandleParagraph {
-    color: $txt-color;
-    line-height: 1.6em;
-    margin-top: 30px;
-}
-
-@mixin HandleSelect {
-    padding: 6px 10px;
-    margin-top: 20px;
-    cursor: pointer;
-    outline: none;
-}
 
 // Center Section
-.fav-parent {
-    margin-top: 80px;
+.order-parent {
+    margin: 80px 0px;
 
-    .center-fav-page h3,
-    .center-fav-page .fav-srow h6,
-    .prod-box-info .prod-price h6 {
+    .center-sec { 
+        .order-heading {
         @include HandleTxtProduct()
-    }
-
-    .center-fav-page {
-        .product-space {
-            margin-top: 50px;
         }
 
-        .fav-srow,.prod-info {
+        .s-row { 
             @include HandleFlexItems();
-        }
-
-    }
-
-    .prod-box-info {
-        .prod-txt {
-            margin-top: 35px;
-
-            h5 {
-                color: black;
-                font-weight: bold;
-            }
-
-            span {
-                @include HandleParagraph();
-            }
-        }
-
-        .prod-img img {
-            @include HandleProductImage();
-        }
-
-        .prod-infoo {
-            @include HandleFlexItems();
-            justify-content: flex-end;
-            margin-top: $fixed-number-margin;
-
-            .prod-box {
-                margin-left: 30px;
-
-                select {
-                    @include HandleSelect();
-                }
-            }
-        }
-    }
-
-    .prod-price h6 {
-        margin-top: 30px;
-    }
-
-    .total-price {
-        margin-top: 100px;
-
-        .show-price {
-            @include HandleFlexItems();
-            border-top: 1px dashed $txt-color;
-            border-bottom: 1px dashed $txt-color;
-            padding: 8px
-        }
-
-        .prod-box {
-            text-align: $text-position;
-            margin: $fixed-number-margin auto;
-
+    
             button {
-                @include ShoppingButton();
-                width: 50%;
-                margin: $fixed-number-margin 0px;
+                background-color: transparent;
+                color: black ;
+                font-size: 22px;
+                border: none;
             }
         }
+
+        .order-data {
+            margin-top: 40px ;
+            border: 1px solid #eee;
+            background-color: #fafafa;
+            padding: 20px ;
+            margin-bottom: 20px ;
+            
+            .order-prd { text-align: center }
+        }
     }
+    
 }

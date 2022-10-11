@@ -1,157 +1,52 @@
 <div class="body-container">
   <!-- Start Order Page -->
-  <div class="fav-parent">
+  <div class="order-parent">
     <div class="container">
-      <!-- Left section -->
-      <section class="row fav-page">
-        <section class="col-md-2 col-12 left-fav-page"></section>
-
-        <!-- Center Section -->
-        <section class="col-md-8 col-12 center-fav-page">
-          <!------------- First Product  ------------------->
+      <div class="row">
+        <section class="col-1"></section>
+        <!-- Center secion, I can Implement all code Inside it -->
+        <section class="col-10 center-sec">
           <!-- First Row -->
-          <div class="fav-frow">
-            <h3>Order List</h3>
+          <div class="f-row">
+            <h3 class="order-heading">Order List</h3>
           </div>
 
           <!-- Second Row -->
-          <div class="fav-srow">
-            <h6></h6>
-            <h6>Buy Online</h6>
-            <h6 class="availbility">Available in-store?</h6>
-            <h6></h6>
+          <div class="s-row">
+            <button class="online-btn">Buy Online</button>
+            <button class="cash-btn">Buy Cash</button>
           </div>
           <hr />
 
-          <!-- Third Row -->
-
-          <!------------ Code for first product --------------->
-          <div class="prod-box-info first-product row product-space">
-            <!-- Show image and information -->
-            <div class="col-md-4 prod-info">
-              <div class="prod-img">
-                <img src="https://picsum.photos/200" 
-                     alt="PicForProduct"
-                     title="PicForProduct"
-                />
+          <!-- Third Row 'this row contains all of orders data' -->
+          <div class="order-data">
+            <div class="row">
+              <!-- Div to Show User ID -->
+              <div class="col-md-2 col-12 user-name">
+                <h3>User ID</h3>
               </div>
 
-              <div class="prod-txt">
-                <h5>HANNELISE</h5>
-                <span
-                  >Cushion multicolour 50x50 cm (20x20 ") 104.650.51</span
-                >
-              </div>
-            </div>
-
-            <div class="col-md-4 prod-info"></div>
-
-            <!-- Show Price and Cateogry -->
-            <div class="col-md-4">
-            </div>
-            <div class="prod-infoo">
-              <!-- start option numbers -->
-              <div class="prod-box col-1">
-                <select>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">1</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                </select>
-              </div>
-  
-              <!-- Show price -->
-              <div class="prod-price col-5">
-                <h6> 299 EGP </h6>
+              <!-- Div to Show Products in Oerder -->
+              <div class="col-md-4 col-12 order-prd">
+                <h4>Product ID</h4>
+                <span>Quantity</span>
               </div>
 
+              <!-- Div To show Payment Method -->
+              <div class="col-md-2 col-12 order-pay">
+                <h4>Online</h4>
+              </div>
+
+              <!-- Div For showing total price for this order -->
+              <div class="col-md-2 col-12 order-price">
+                <h4>SubTotal: </h4>
+              </div>
             </div>
           </div>
 
-          <!------------ Code for second product --------------->
-          <div class="prod-box-info second-product row product-space">
-            <!-- Show image and information -->
-            <div class="col-md-4 prod-info">
-              <div class="prod-img">
-                <img src="https://picsum.photos/200" 
-                     alt="PicForProduct"
-                     title="PicForProduct"
-                />
-              </div>
-
-              <div class="prod-txt">
-                <h5>HANNELISE</h5>
-                <span
-                  >Cushion multicolour 50x50 cm (20x20 ") 104.650.51</span
-                >
-              </div>
-            </div>
-
-            <div class="col-md-4 prod-info"></div>
-
-            <div class="prod-infoo">
-              <!-- start option numbers -->
-              <div class="prod-box col-1">
-                <select>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">1</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                </select>
-              </div>
-
-              <!-- Show price -->
-              <div class="prod-price col-5">
-                <h6> 299 EGP </h6>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Start Div for total price -->
-          <div class="total-price">
-            <div class="show-price">
-              <span>Subtotal</span>
-              <h6> 900 EGP </h6>
-            </div>
-
-            <div class="prod-box">
-              <aside>Want to buy all these items online ?</aside>
-              <button class="card-button">
-                Complete Order
-              </button>
-            </div>
-          </div>
-          <!-- End Div for total price -->
         </section>
-
-        <!-- Right Section -->
-        <section class="col-md-2 col-12 right-fav-page"></section>
-      </section>
+        <section class="col-1"></section>
+      </div>
     </div>
   </div>
   <!-- End Order Page -->
