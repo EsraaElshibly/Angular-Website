@@ -5,7 +5,7 @@
       <div 
         class="prd-card card-box col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let product of productList" 
       >
-        <!------- use Structural directive(*ngIf) for Highlight card according to less of AvailablePieces ------->
+        <!------- use attribute directive[ngStyle] for Highlight card according to less of AvailablePieces ------->
         <div 
           class="card" 
           [ngStyle]="{
@@ -13,9 +13,20 @@
           }"
         >
           <!-- Show Image from json data -->
-          <img [src] = "product.ProductImg" alt="productImage" title="productImage" />
+          <div class="prd-image">
+            <img [src] = "product.ProductImg" alt="productImage" title="productImage" />
+          </div>
+          
           <!-- Show name -->
-          <h3> {{product.ProductName}} </h3>
+          <div class="prd-name">
+            <h3> {{product.ProductName}} </h3>
+          </div>
+
+          <!-- Create Div for showing Amount -->
+          <div class="amount">
+            <h6>Quantity: {{ product.AvailablePieces }} </h6>
+          </div>
+
           <!-- Make this div more responsive by bootstrap instead of using class d-flex  -->
           <div class="row">
             <div class="col-md-6 col-12">
@@ -31,6 +42,7 @@
               ></ngb-rating>
             </div>
           </div>
+
           <!-- Create Button to user make order -->
           <div>
             <button class="bttn" type="button">Make Order</button>
