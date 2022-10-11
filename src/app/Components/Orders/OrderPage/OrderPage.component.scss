@@ -38,10 +38,9 @@ font-weight: bold;
     margin-top: 30px;
 }
 
-
 @mixin HandleSelect {
     padding: 6px 10px;
-    margin-top: 5px;
+    margin-top: 20px;
     cursor: pointer;
     outline: none;
 }
@@ -61,8 +60,7 @@ font-weight: bold;
             margin-top: 50px;
         }
 
-        .fav-srow,
-        .prod-info {
+        .fav-srow,.prod-info {
             @include HandleFlexItems();
         }
 
@@ -94,27 +92,8 @@ font-weight: bold;
             .prod-box {
                 margin-left: 30px;
 
-                .card-button {
-                    @include ShoppingButton();
-                    width: 100%;
-
-                    i {
-                        padding-right: 10px;
-                    }
-                }
-
-                .card-button:hover {
-                    opacity: 0.8;
-                }
-
-                select,
-                .del-prod i {
+                select {
                     @include HandleSelect();
-                }
-
-                .del-prod {
-                    background-color: transparent;
-                    margin-top: 3px;
                 }
             }
         }
@@ -141,7 +120,7 @@ font-weight: bold;
             button {
                 @include ShoppingButton();
                 width: 50%;
-                margin-top: $fixed-number-margin;
+                margin: $fixed-number-margin 0px;
             }
         }
     }
