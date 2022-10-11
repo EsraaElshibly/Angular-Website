@@ -3,13 +3,4 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
-@mixin DisplayItems {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  @mixin TextDecoration {
-    color: white;
-    text-decoration: none;
-  }
+body {background-color: lavenderblush;}
