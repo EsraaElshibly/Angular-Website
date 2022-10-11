@@ -1,9 +1,17 @@
 <div class="products container">
   <!-- Class Row For Responsive design by bootstrab -->
   <div class="row">
-      <!------- Start card Parent and use Structural directive for repeating card according to data in json file ------->
-      <div class="prd-card card-box col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let product of productList">
-        <div class="card">
+      <!------- Start card Parent and use Structural directive(ngFor) for repeating card according to data in json file ------->
+      <div 
+        class="prd-card card-box col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let product of productList" 
+      >
+        <!------- use Structural directive(*ngIf) for Highlight card according to less of AvailablePieces ------->
+        <div 
+          class="card" 
+          [ngStyle]="{
+          'background-color': product.AvailablePieces <= 5 ? '#ecc3ea' : '#fafafa'
+          }"
+        >
           <!-- Show Image from json data -->
           <img [src] = "product.ProductImg" alt="productImage" title="productImage" />
           <!-- Show name -->
