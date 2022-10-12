@@ -13,6 +13,7 @@
     // Creating Model, import it. then assign it to value of prdList 
     // Assign list of products by product data that returned from JSON file
     productList: Products[] = []
+    orderList: any[] = []
 
     constructor(private productService: ProductService) { }
 
@@ -50,10 +51,10 @@
     {
       if(!this.productService.productsInOrder(product))
       {
-        product.quantity = 1
+        product.AvailablePieces = 1
         this.productService.addOrder(product)
-        this.productList = this.productService.getProducts()
-        console.log(this.productList);
+        this.orderList = [...this.productService.getProducts()]
+        console.log(this.orderList);
       }
     }
 

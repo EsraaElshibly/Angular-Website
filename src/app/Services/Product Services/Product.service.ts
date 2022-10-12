@@ -21,17 +21,20 @@ export class ProductService {
     return this.products
   }
 
+  // Function to save order into local dtorage, to make orders easy for save and is shown again
   saveOrder()
   {
     localStorage.setItem('orderItems', JSON.stringify(this.products))
   }
 
+  // Function to push new order into orderList
   addOrder(addedProduct: any)
   {
     this.products.push(addedProduct)
     this.saveOrder()
   }
 
+  // Function to load data form localStorage to show this data if user open orderPage
   loadOrder()
   {
     this.products = JSON.parse(localStorage.getItem('orderItems') as any) || [] 
@@ -39,7 +42,7 @@ export class ProductService {
 
   productsInOrder(product: any)
   {
-    return this.products.findIndex((x: any) => x.id === product.id ) > -1
+    return this.products.findIndex((x: any) => x.id === product.ProductId) > -1
   }
   
 }
