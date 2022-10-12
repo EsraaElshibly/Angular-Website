@@ -7,15 +7,22 @@ import { Orders } from 'src/app/Models/Orders'
   templateUrl: './OrderPage.component.html',
   styleUrls: ['./OrderPage.component.scss']
 })
+
+// interface ProductsInOrder {
+//   ProductId: String,
+//   Quantity: Number
+// }
+
 export class OrderPageComponent implements OnInit {
 
-  orderList: Orders[] = OrderData
+  orderList: Orders[] = OrderData;
+  // productsInOrderList: ProductsInOrder[] = this.orderList.Products
 
   constructor() { }
 
   ngOnInit() {
     console.log(this.orderList);
-    
+    // console.log(OrderData);
   }
 
 }

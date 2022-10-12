@@ -19,22 +19,22 @@
           <hr />
 
           <!-- Third Row 'this row contains all of orders data' -->
-          <div class="order-data">
+          <div class="order-data" *ngFor="let order of orderList">
             <div class="row">
               <!-- Div to Show User ID -->
               <div class="col-md-2 col-12 user-name">
-                <h3>User ID</h3>
+                <h3>User{{ order.OrderId }} </h3>
               </div>
 
               <!-- Div to Show Products in Oerder -->
-              <div class="col-md-4 col-12 order-prd">
-                <h4>Product ID</h4>
+              <div class="col-md-4 col-12 order-prd" >
+                <h4>Product ID: </h4>
                 <span>Quantity</span>
               </div>
 
               <!-- Div To show Payment Method -->
               <div class="col-md-2 col-12 order-pay">
-                <h4>Online</h4>
+                <h4>  {{order.PaymentType}} </h4>
               </div>
 
               <!-- Div For showing total price for this order -->
