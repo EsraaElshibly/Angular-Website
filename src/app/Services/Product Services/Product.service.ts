@@ -20,4 +20,26 @@ export class ProductService {
   {
     return this.products
   }
+
+  saveOrder()
+  {
+    localStorage.setItem('orderItems', JSON.stringify(this.products))
+  }
+
+  addOrder(addedProduct: any)
+  {
+    this.products.push(addedProduct)
+    this.saveOrder()
+  }
+
+  loadOrder()
+  {
+    this.products = JSON.parse(localStorage.getItem('orderItems') as any) || [] 
+  }
+
+  productsInOrder(product: any)
+  {
+    return this.products.findIndex((x: any) => x.id === product.id ) > -1
+  }
+  
 }
