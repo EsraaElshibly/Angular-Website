@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/Shared/Navbar/Navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { ProductPageComponent } from './Components/Products/ProductPage/ProductPage.component'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProductPageComponent } from './Components/Products/ProductPage/ProductP
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

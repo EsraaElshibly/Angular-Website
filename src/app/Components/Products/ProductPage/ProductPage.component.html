@@ -85,14 +85,14 @@
       
                     <!-- Div To show Payment Method -->
                     <div class="col-md-2 col-12 order-pay">
-                      <input min="1" type="number" value="1" name="" class="form-control">
+                      <input min="1" [max]="order.AvailablePieces" type="number" value="1" name="" class="form-control" [(ngModel)] = "order.AvailablePieces" [ngModelOptions]="{standalone: true}" >
 
                       <!-- <span>SubTotal: {{order.ProductPrice}} </span> -->
                     </div>
       
                     <!-- Div For showing total price for this order -->
                     <div class="col-md-2 col-12 order-price">
-                      <h4>SubTotal: {{order.ProductPrice}} </h4>
+                      <h4>SubTotal: {{ order.AvailablePieces * order.ProductPrice | currency }} </h4>
                     </div>
                   </div>
                 </div>
