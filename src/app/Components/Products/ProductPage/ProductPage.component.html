@@ -51,5 +51,63 @@
       </div>
       <!------- End first card ------->
 
+
+      <!-- ORder page and i remove this code after making routing -->
+      <div class="body-container">
+        <!-- Start Order Page -->
+        <div class="order-parent">
+          <div class="container">
+            <div class="row">
+              <section class="col-1"></section>
+              <!-- Center secion, I can Implement all code Inside it -->
+              <section class="col-10 center-sec">
+                <!-- First Row -->
+                <div class="f-row">
+                  <h3 class="order-heading">Order List</h3>
+                  <h3>SubTotal: </h3>
+                </div>
+      
+                
+                <hr />
+      
+                <!-- Third Row 'this row contains all of orders data' -->
+                <div class="order-data" *ngFor="let order of orderList">
+                  <div class="row">
+                    <!-- Div to Show User ID -->
+                    <div class="col-md-2 col-12 user-name">
+                      <h3>{{ order.ProductName }} </h3>
+                    </div>
+      
+                    <!-- Div to Show Products in Oerder -->
+                    <div class="col-md-4 col-12 order-prd" >
+                      <img [src] = "order.ProductImg" alt="productImage" title="productImage" />
+                    </div>
+      
+                    <!-- Div To show Payment Method -->
+                    <div class="col-md-2 col-12 order-pay">
+                      <input min="1" type="number" value="1" name="" class="form-control">
+
+                      <!-- <span>SubTotal: {{order.ProductPrice}} </span> -->
+                    </div>
+      
+                    <!-- Div For showing total price for this order -->
+                    <div class="col-md-2 col-12 order-price">
+                      <h4>SubTotal: {{order.ProductPrice}} </h4>
+                    </div>
+                  </div>
+                </div>
+      
+              </section>
+              <section class="col-1"></section>
+            </div>
+          </div>
+        </div>
+        <!-- End Order Page -->
+      </div>
+      
+
+
+
   </div>
+
 </div>
