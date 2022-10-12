@@ -21,7 +21,5 @@ export class ProductPageComponent implements OnInit {
     console.log(this.productList);   //This line for me to show data
   }
 
-  
-
 }
 
