@@ -2,7 +2,6 @@
   import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
   import { Products } from 'src/app/Models/Products'
   import { ProductService } from 'src/app/Services/Product Services/Product.service'
-  import { Router } from '@angular/router'
 
   @Component({
     selector: 'app-ProductPage',
@@ -18,7 +17,6 @@
 
     constructor(
       private productService: ProductService,
-      private router: Router
       ) { }
 
     ngOnInit() {
@@ -82,7 +80,6 @@
     checkout()
     {
       localStorage.setItem('totalPrice', JSON.stringify(this.totalPrice))
-      this.router.navigate(['/payment'])
     }
 
   }

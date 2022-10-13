@@ -1,9 +1,10 @@
 <div class="products container">
   <!-- Class Row For Responsive design by bootstrab -->
   <div class="row">
+    <div class="col-md-9 col-12">
       <!------- Start card Parent and use Structural directive(ngFor) for repeating card according to data in json file ------->
       <div 
-        class="prd-card card-box col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let product of productList" 
+        class="prd-card card-box col-md-9 col-sm-6 col-12" *ngFor="let product of productList" 
       >
         <!------- use attribute directive[ngStyle] for Highlight card according to less of AvailablePieces ------->
         <div 
@@ -50,59 +51,51 @@
         </div>
       </div>
       <!------- End first card ------->
+    </div>
 
 
       <!-- ORder page and i remove this code after making routing -->
-      <div class="body-container">
+      <div class="col-md-3 col-12">
         <!-- Start Order Page -->
         <div class="order-parent">
-          <div class="container">
-            <div class="row">
-              <section class="col-1"></section>
-              <!-- Center secion, I can Implement all code Inside it -->
-              <section class="col-10 center-sec">
-                <!-- First Row -->
-                <div class="f-row">
-                  <h3 class="order-heading">Order List</h3>
-                </div>
-      
-                <div class="s-row">
-                  <h3>Order Total Price: {{totalPrice | currency}} </h3>
-                  <button class="bttn btn-checkout" (click)="checkout()">Begin Checkout</button>
-                </div>
-                <hr />
-      
-                <!-- Third Row 'this row contains all of orders data' -->
-                <div class="order-data" *ngFor="let order of orderList">
-                  <div class="row">
-                    <!-- Div to Show User ID -->
-                    <div class="col-md-2 col-12 user-name">
-                      <h3>{{ order.ProductName }} </h3>
-                    </div>
-      
-                    <!-- Div to Show Products in Oerder -->
-                    <div class="col-md-4 col-12 order-prd" >
-                      <img [src] = "order.ProductImg" alt="productImage" title="productImage" />
-                    </div>
-      
-                    <!-- Div To show Payment Method -->
-                    <div class="col-md-2 col-12 order-pay">
-                      <input min="1" [max]="order.AvailablePieces" type="number" value="1" name="" class="form-control" [(ngModel)] = "order.AvailablePieces" [ngModelOptions]="{standalone: true}" >
+          <!-- First Row -->
+          <div class="f-row">
+            <h3 class="order-heading">Order List</h3>
+          </div>
 
-                      <!-- <span>SubTotal: {{order.ProductPrice}} </span> -->
-                    </div>
-      
-                    <!-- Div For showing total price for this order -->
-                    <div class="col-md-2 col-12 order-price">
-                      <h4>SubTotal: {{ order.AvailablePieces * order.ProductPrice | currency }} </h4>
-                    </div>
-                  </div>
-                </div>
-      
-              </section>
-              <section class="col-1"></section>
+          <div class="s-row">
+            <h3>Order Total Price: {{totalPrice | currency}} </h3>
+            <button class="bttn btn-checkout" (click)="checkout()">Begin Checkout</button>
+          </div>
+          <hr />
+
+          <!-- Third Row 'this row contains all of orders data' -->
+          <div class="order-data" *ngFor="let order of orderList">
+            <div class="">
+              <!-- Div to Show User ID -->
+              <div class="user-name">
+                <h3>{{ order.ProductName }} </h3>
+              </div>
+
+              <!-- Div to Show Products in Oerder -->
+              <div class="order-prd" >
+                <img [src] = "order.ProductImg" alt="productImage" title="productImage" />
+              </div>
+
+              <!-- Div To show Payment Method -->
+              <div class="order-pay">
+                <input min="1" [max]="order.AvailablePieces" type="number" value="1" name="" class="form-control" [(ngModel)] = "order.AvailablePieces" [ngModelOptions]="{standalone: true}" >
+
+                <!-- <span>SubTotal: {{order.ProductPrice}} </span> -->
+              </div>
+
+              <!-- Div For showing total price for this order -->
+              <div class="order-price">
+                <h4>SubTotal: {{ order.AvailablePieces * order.ProductPrice | currency }} </h4>
+              </div>
             </div>
           </div>
+
         </div>
         <!-- End Order Page -->
       </div>
