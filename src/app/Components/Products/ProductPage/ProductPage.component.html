@@ -64,12 +64,13 @@
           </div>
 
           <div class="s-row">
-            <h3>Order Total Price: {{totalPrice | currency}} </h3>
+            <h3>Total Price: {{totalPrice | currency}} </h3>
             <button class="bttn btn-checkout" (click)="checkout()">Begin Checkout</button>
           </div>
           <hr />
 
           <!-- Third Row 'this row contains all of orders data' -->
+
           <div class="order-data" *ngFor="let order of orderList">
             <div class="">
               <!-- Div to Show User ID -->

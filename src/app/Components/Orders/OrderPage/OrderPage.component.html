@@ -22,14 +22,13 @@
           <div class="order-data" *ngFor="let order of orderList">
             <div class="row">
               <!-- Div to Show User ID -->
-              <div class="col-md-2 col-12 user-name">
-                <h3>User{{ order.OrderId }} </h3>
+              <div class="col-md-4 col-12 user-name">
+                <h3>User{{ order.UserId }} </h3>
               </div>
 
-              <!-- Div to Show Products in Oerder -->
-              <div class="col-md-4 col-12 order-prd" >
-                <h4>Product ID: </h4>
-                <span>Quantity</span>
+              <!-- Div to Show Date in Oerder -->
+              <div class="col-md-6 col-12 order-prd" >
+                <h4> {{order.OrderDate}} </h4>
               </div>
 
               <!-- Div To show Payment Method -->
@@ -37,10 +36,6 @@
                 <h4>  {{order.PaymentType}} </h4>
               </div>
 
-              <!-- Div For showing total price for this order -->
-              <div class="col-md-2 col-12 order-price">
-                <h4>SubTotal: </h4>
-              </div>
             </div>
           </div>
 

@@ -47,6 +47,10 @@
         }
     })
     
+    // Function to get data from localStorage to show in orderList
+    this.productService.loadOrder()
+    // Set orderlist by products that in localStorage to dhow in page
+    this.orderList = this.productService.getProducts()
     }
   
     // Function to add order in orderList
@@ -54,7 +58,7 @@
     {
       if(!this.productService.productsInOrder(product))
       {
-        product.AvailablePieces = 1
+        // product.AvailablePieces = 1
         this.productService.addOrder(product)
         this.orderList = [...this.productService.getProducts()]
         console.log(this.orderList);
