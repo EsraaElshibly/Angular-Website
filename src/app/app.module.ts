@@ -8,12 +8,15 @@ import { NavbarComponent } from './Components/Shared/Navbar/Navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { ProductPageComponent } from './Components/Products/ProductPage/ProductPage.component'
 import { FormsModule } from '@angular/forms';
+import { OnlinePaymentComponent } from 'src/app/Components/OnlinePayment/OnlinePayment.component'
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    OnlinePaymentComponent
   ],
   imports: [
     BrowserModule,

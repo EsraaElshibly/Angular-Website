@@ -64,10 +64,12 @@
                 <!-- First Row -->
                 <div class="f-row">
                   <h3 class="order-heading">Order List</h3>
-                  <h3>Order Total Price: {{totalPrice | currency}} </h3>
                 </div>
       
-                
+                <div class="s-row">
+                  <h3>Order Total Price: {{totalPrice | currency}} </h3>
+                  <button class="bttn btn-checkout" (click)="checkout()">Begin Checkout</button>
+                </div>
                 <hr />
       
                 <!-- Third Row 'this row contains all of orders data' -->

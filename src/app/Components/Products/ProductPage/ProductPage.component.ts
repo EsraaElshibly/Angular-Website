@@ -2,6 +2,7 @@
   import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
   import { Products } from 'src/app/Models/Products'
   import { ProductService } from 'src/app/Services/Product Services/Product.service'
+  import { Router } from '@angular/router'
 
   @Component({
     selector: 'app-ProductPage',
@@ -15,7 +16,10 @@
     productList: Products[] = []
     orderList: any[] = []
 
-    constructor(private productService: ProductService) { }
+    constructor(
+      private productService: ProductService,
+      private router: Router
+      ) { }
 
     ngOnInit() {
       this.getAllProduct()  //This line for me to show data
@@ -72,6 +76,13 @@
         // Set Intial value to make price = 0$ if there is no order
         {AvailablePieces:1, ProductPrice: 0}
       ).ProductPrice
+    }
+
+    // Function to complete order and pay by online method
+    checkout()
+    {
+      localStorage.setItem('totalPrice', JSON.stringify(this.totalPrice))
+      this.router.navigate(['/payment'])
     }
 
   }
